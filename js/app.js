@@ -20,7 +20,7 @@ function eventListeners() {
         //Will ask the visitor weekly budget
         userBudget = prompt('What\'s your budget for this week?');
         //Validate the user Budget
-        if(userBudget === null) {
+        if(userBudget === null || userBudget === '' || userBudget === '0') {
             window.location.reload();
         }
     });
