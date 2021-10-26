@@ -43,8 +43,11 @@ class HTML {
         //Create the template
         li.innerHTML = `
         ${name}
-        <span class="badge ">${amount}</span>
+        <span class="badge badge-primary badge-pill">${amount}</span>
         `;
+
+        //Insert into the HTML
+        expensesList.appendChild(li);
     }
 }
 
