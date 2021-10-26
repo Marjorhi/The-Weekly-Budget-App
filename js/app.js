@@ -63,6 +63,8 @@ class HTML {
         //Check when 25% is left
         if( (budget.budget / 4) > budgetLeftDollars ){
             //Add some classes and remove others
+
+        } else if( (budget.budget / 2) > budgetLeftDollars) {
             
         }
     }
