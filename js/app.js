@@ -58,7 +58,7 @@ class HTML {
     //Subtract expenses amount from budget
     trackBudget(amount) {
         const budgetLeftDollars = budget.substractFromBudget(amount);
-        console.log(budgetLeftDollars);
+        budgetLeft.innerHTML = `${budgetLeftDollars}`;
     }
 }
 
