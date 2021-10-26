@@ -49,9 +49,17 @@ function eventListeners() {
     });
 
     //When a new expense is added
-    addExpenseForm.addEventListeners('submit', function (e) {
-        //Read the input values 
+    addExpenseForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        //Read the input values
         const expenseName = document.querySelector('#expense').value;
         const amount = document.querySelector('#amount').value;
+
+        if(expenseName === '' || amount === '' ) {
+            console.log('Invalid');
+        } else {
+            console.log('Correct');
+        }
     });
 }
