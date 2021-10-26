@@ -40,7 +40,11 @@ class HTML {
         //Create a li
         const li = document.createElement('li');
         li.className = "list-group-item d-flex justify-content-between align-items-center";
-        //
+        //Create the template
+        li.innerHTML = `
+        ${name}
+        <span class="badge ">${amount}</span>
+        `;
     }
 }
 
