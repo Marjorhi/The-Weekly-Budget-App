@@ -29,6 +29,9 @@ function eventListeners() {
             window.location.reload();
         } else {
             //Budget is valid then instantiate the budget class
+            budget = new Budget(userBudget);
+
+            console.log(budget);
         }
     });
 
