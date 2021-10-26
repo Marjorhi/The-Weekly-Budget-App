@@ -117,6 +117,7 @@ function eventListeners() {
             //Add the expenses into the list
             html.addExpenseToList(expenseName, amount);
             html.trackBudget(amount);
+            html.printMessage('Added...', 'alert-success');
         }
     });
 }
