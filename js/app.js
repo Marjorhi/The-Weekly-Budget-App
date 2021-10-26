@@ -59,6 +59,11 @@ class HTML {
     trackBudget(amount) {
         const budgetLeftDollars = budget.substractFromBudget(amount);
         budgetLeft.innerHTML = `${budgetLeftDollars}`;
+
+        //Check when 25% is left
+        if( (budget.budget / 4) ){
+
+        }
     }
 }
 
