@@ -61,8 +61,9 @@ class HTML {
         budgetLeft.innerHTML = `${budgetLeftDollars}`;
 
         //Check when 25% is left
-        if( (budget.budget / 4) ){
-
+        if( (budget.budget / 4) > budgetLeftDollars ){
+            //Add some classes and remove others
+            
         }
     }
 }
