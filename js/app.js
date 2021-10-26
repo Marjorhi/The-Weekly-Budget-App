@@ -10,17 +10,23 @@ class Budget {
 //Everything related to HTML
 class HTML {
 
-
+    //Inserts the budget when the users submits it
+    insertBudget(amount) {
+        //Insert into HTML
+        budgetTotal.innerHTML = `${amount}`;
+        budgetLeft.innerHTML = `${amount}`;
+    }
 }
 
 //Variables
 const addExpenseForm = document.querySelector('#add-expense'),
-html = new HTML();
-
+budgetTotal = document.querySelector('span#total'),
+budgetLeft = document.querySelector('span#left');
 
 let budget, userBudget;
 
-
+//Instantiate the HTML Class
+const html = new HTML();
 
 //Event Listeners
 eventListeners();
@@ -38,7 +44,7 @@ function eventListeners() {
             budget = new Budget(userBudget);
 
             //Instantiate HTML class
-            html.insertBudget();
+            html.insertBudget(budget);
         }
     });
 
