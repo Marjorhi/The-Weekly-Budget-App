@@ -30,6 +30,7 @@ class HTML {
         setTimeout(function(){
 
             document.querySelector('.primary .alert').remove();
+            addExpenseForm.reset();
         }, 3000);
     }
 }
