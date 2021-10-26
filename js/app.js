@@ -19,6 +19,10 @@ function eventListeners() {
     document.addEventListener('DOMContentLoaded', function() {
         //Will ask the visitor weekly budget
         userBudget = prompt('What\'s your budget for this week?');
+        //Validate the user Budget
+        if(userBudget === null) {
+            window.location.reload();
+        }
     });
 
     //When a new expense is added
