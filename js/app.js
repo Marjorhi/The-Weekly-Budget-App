@@ -62,10 +62,12 @@ class HTML {
 
         //Check when 25% is left
         if( (budget.budget / 4) > budgetLeftDollars ){
-            //Add some classes and remove others
-
+            budgetLeft.parentElement.parentElement.classList.remove('alert-success',
+            'alert-warning');
+            budgetLeft.parentElement.parentElement.classList.add('alert-danger');
         } else if( (budget.budget / 2) > budgetLeftDollars) {
-            
+            budgetLeft.parentElement.parentElement.classList.remove('alert-success');
+            budgetLeft.parentElement.parentElement.classList.add('alert-warning');
         }
     }
 }
