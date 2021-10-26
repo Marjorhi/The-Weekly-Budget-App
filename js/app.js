@@ -25,6 +25,12 @@ class HTML {
 
         //Insert into HTML
         document.querySelector('.primary').insertBefore(messageWrapper, addExpenseForm);
+
+        //Clear the error 
+        setTimeout(function(){
+
+            document.querySelector('.primary .alert').remove();
+        }, 3000);
     }
 }
 
