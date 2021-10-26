@@ -12,7 +12,6 @@ class HTML {
     
     //Inserts the budget when the users submits it
     insertBudget(amount) {
-        console.log(amount);
         //Insert into HTML
         budgetTotal.innerHTML = `${amount}`;
         budgetLeft.innerHTML = `${amount}`;
@@ -51,6 +50,8 @@ function eventListeners() {
 
     //When a new expense is added
     addExpenseForm.addEventListeners('submit', function (e) {
-        e.preventDefault();
+        //Read the input values 
+        const expenseName = document.querySelector('#expense').value;
+        const amount = document.querySelector('#amount').value;
     });
 }
