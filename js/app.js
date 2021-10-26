@@ -33,6 +33,10 @@ class HTML {
             addExpenseForm.reset();
         }, 3000);
     }
+    //Displays the expenses from the form into the list
+    addExpenseToList(name, amount) {
+        
+    }
 }
 
 //Variables
@@ -77,7 +81,8 @@ function eventListeners() {
             html.printMessage('There was an error, all the fields are mandatory',
             'alert-danger');
         } else {
-            console.log('Correct');
+            //Add the expenses into the list
+            html.addExpenseToList(expenseName, amount);
         }
     });
 }
