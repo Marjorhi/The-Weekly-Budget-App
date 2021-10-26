@@ -35,7 +35,12 @@ class HTML {
     }
     //Displays the expenses from the form into the list
     addExpenseToList(name, amount) {
-        
+        const expensesList = document.querySelector('#expenses ul');
+
+        //Create a li
+        const li = document.createElement('li');
+        li.className = "list-group-item d-flex justify-content-between align-items-center";
+        //
     }
 }
 
