@@ -22,6 +22,9 @@ class HTML {
         const messageWrapper = document.createElement('div');
         messageWrapper.classList.add('text-center', 'alert', className);
         messageWrapper.appendChild(document.createTextNode(message));
+
+        //Insert into HTML
+        document.querySelector('.primary').insertBefore(messageWrapper, addExpenseForm);
     }
 }
 
