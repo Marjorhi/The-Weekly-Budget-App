@@ -16,6 +16,13 @@ class HTML {
         budgetTotal.innerHTML = `${amount}`;
         budgetLeft.innerHTML = `${amount}`;
     }
+
+    //Displays a message (correct or invalid)
+    printMessage(message, className) {
+        const messageWrapper = document.createElement('div');
+        messageWrapper.classList.add('text-center', 'alert', className);
+        messageWrapper.appendChild(document.createTextNode(message));
+    }
 }
 
 //Variables
@@ -57,7 +64,8 @@ function eventListeners() {
         const amount = document.querySelector('#amount').value;
 
         if(expenseName === '' || amount === '' ) {
-            console.log('Invalid');
+            html.printMessage('There was an error, all the fields are mandatory',
+            'alert-danger');
         } else {
             console.log('Correct');
         }
