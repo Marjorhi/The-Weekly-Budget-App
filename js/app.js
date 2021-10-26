@@ -9,9 +9,10 @@ class Budget {
 
 //Everything related to HTML
 class HTML {
-
+    
     //Inserts the budget when the users submits it
     insertBudget(amount) {
+        console.log(amount);
         //Insert into HTML
         budgetTotal.innerHTML = `${amount}`;
         budgetLeft.innerHTML = `${amount}`;
@@ -44,7 +45,7 @@ function eventListeners() {
             budget = new Budget(userBudget);
 
             //Instantiate HTML class
-            html.insertBudget(budget);
+            html.insertBudget(budget.budget);
         }
     });
 
