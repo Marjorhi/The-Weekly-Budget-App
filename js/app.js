@@ -5,6 +5,11 @@ class Budget {
         this.budget = Number (budget);
         this.budgetLeft = this.budget;
     }
+
+    //Subract from the budget
+    substractFromBudget(amount) {
+        return this .budgetLeft -= amount;
+    }
 }
 
 //Everything related to HTML
@@ -48,6 +53,12 @@ class HTML {
 
         //Insert into the HTML
         expensesList.appendChild(li);
+    }
+
+    //Subtract expenses amount from budget
+    trackBudget(amount) {
+        const budgetLeftDollars = budget.substractFromBudget(amount);
+        console.log(budgetLeftDollars);
     }
 }
 
@@ -95,6 +106,7 @@ function eventListeners() {
         } else {
             //Add the expenses into the list
             html.addExpenseToList(expenseName, amount);
+            html.trackBudget(amount);
         }
     });
 }
