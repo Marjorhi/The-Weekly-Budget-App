@@ -1,4 +1,5 @@
 //Classes
+
 class Budget {
     constructor(budget) {
         this.budget = Number (budget);
@@ -6,10 +7,15 @@ class Budget {
     }
 }
 
+//Everything related to HTML
+class HTML {
 
+
+}
 
 //Variables
-const addExpenseForm = document.querySelector('#add-expense');
+const addExpenseForm = document.querySelector('#add-expense'),
+html = new HTML();
 
 
 let budget, userBudget;
@@ -31,12 +37,13 @@ function eventListeners() {
             //Budget is valid then instantiate the budget class
             budget = new Budget(userBudget);
 
-            console.log(budget);
+            //Instantiate HTML class
+            html.insertBudget();
         }
     });
 
     //When a new expense is added
-    addExpenseForm.eventListeners('submit', function (e) {
+    addExpenseForm.addEventListeners('submit', function (e) {
         e.preventDefault();
     });
 }
